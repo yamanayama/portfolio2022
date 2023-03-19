@@ -1,5 +1,6 @@
-/** @type {import('next').NextConfig} */
-const withLinaria = require('next-linaria')
+/**
+ * @type {import('next').NextConfig}
+ */
 
 const nextConfig = {
   reactStrictMode: true,
@@ -7,11 +8,9 @@ const nextConfig = {
   images: {
     domains: ["images.microcms-assets.io"],
   },
+  compiler: {
+    emotion: true
+  }
 }
 
-const linariaOption = {}
-
-module.exports = withLinaria({
-  ...nextConfig,
-  linaria: linariaOption,
-})
+module.exports = nextConfig
