@@ -1,28 +1,43 @@
 /** @jsxImportSource @emotion/react */
 import Link from 'next/link';
+import { useRouter } from "next/router";
 
 import { css } from '@emotion/react'
 
 import { color, typography, breakPoint } from '../../styles/constans'
 
 const Nav = ({ open, setOpen }) => {
+  const router = useRouter();
 
   return (
     <>
       {open && (
         <nav css={navi}>
+          <div css={naviLogo}>
+            <Link href="/">
+              <a css={title}>Naomi <span css={titleLiner}>Murakami</span></a>
+            </Link></div>
           <ul css={list}>
             <li css={listItem}>
-              <Link href="/">Home</Link>
+              <Link href="/skill">
+                <a
+                  css={
+                    router.pathname.startsWith("/skill")
+                      ? current
+                      : nonCurrent
+                  }
+                >
+                  Skill</a></Link>
             </li>
             <li css={listItem}>
-              <Link href="/career">Career</Link>
-            </li>
-            <li css={listItem}>
-              <Link href="/skill">Skill</Link>
-            </li>
-            <li css={listItem}>
-              <Link href="/works">Works</Link>
+              <Link href="/gohan"><a
+                css={
+                  router.pathname.startsWith("/works")
+                    ? current
+                    : nonCurrent
+                }
+              >
+                Works</a></Link>
             </li>
           </ul>
         </nav>
@@ -33,28 +48,44 @@ const Nav = ({ open, setOpen }) => {
 
 export default Nav
 
-const list = () => css`
-    display: ${props => props.open ? 'none' : 'block'
-  };
-    font-size: ${typography.text.headline4}px;
+const list = css`
+    font-size: ${typography.text.headline5}px;
+    margin-top: 24px;
 
     @media (min-width: ${breakPoint}) {
         display: flex;
         font-size: ${typography.text.body2}px;
         flex-shrink: 0;
-        margin-left: auto;
-        padding: 0;
+        margin-top : 0;
+        padding: 0 40px;
     }
 `
 
 const listItem = css`
-    border-radius: 4px;
+    line-height: 1.5;
     padding: 8px;
     text-transform: capitalize;
-    line-height: 1.5;
-    
-    &:hover{
-        color: ${color.pink[80]};
+    position: relative;
+
+    @media (min-width: ${breakPoint}) {
+      a{
+        &::after{
+          position: absolute;
+          left: 0;
+          content: '';
+          width: 100%;
+          height: 2px;
+          background: #000000;
+          bottom: -1px;
+          transform: scale(0,1) ;
+          transform-origin: left top;
+          transition: all 0.3s ease-out;
+          }
+
+        &:hover::after{
+          transform: scale(1,1);
+        }
+      }
     }
 `
 
@@ -69,7 +100,39 @@ const navi = css`
     z-index: 2;
 
     @media (min-width: ${breakPoint}) {
-        position: initial;
-        width: initial;
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      position: static;
+      transform: translateX(0);
     }
 `
+
+const naviLogo = css`
+    color: ${color.text.high};
+    cursor : pointer;
+    text-align: center;
+    z-index: 2;
+`
+
+const current = css`
+    cursor : pointer;
+    font-weight: bold;
+`
+
+const nonCurrent = css`
+    cursor : pointer;
+`
+
+const title = css`
+      font-size: ${typography.text.headline5}px;
+      font-weight: bold;
+
+    @media (min-width: ${breakPoint}) {
+      font-size:${typography.text.body1}px;
+    }
+      `
+
+const titleLiner = css`
+      font-weight: 200;
+      `

@@ -38,12 +38,20 @@ const heading = css`
     display: flex;
     justify-content: space-between;
     padding: 8px 0;
-    position: relative;
+    position: fixed;
     width: 100%;
+    z-index: 1;
+      top: 0;
+
+    @media (min-width: ${breakPoint}) {
+      max-width: 1536px;
+      margin: auto;
+      padding: 16px 32px;
+    }
 `;
 
 const overlay = css`
-    background: ${color.surface};
+    background: ${color.salmon};
     height: 100vh;
     left: 50%;
     top: 50%;

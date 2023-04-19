@@ -32,6 +32,7 @@ const hamburger = css`
 `
 
 const hamburgerButton = css`
+    align-items: center;
     display: flex;
     height: 45px;
     justify-content: center;
