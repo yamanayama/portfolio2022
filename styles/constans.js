@@ -5,9 +5,17 @@ export const color = {
   black: "#000",
   white: "#fff",
   error: "#B00020",
-  background: "#FFF2EC",
+  background: "#f9f3f2",
   surface: "#FFF2EC",
 
+  //webオンリーカラー
+  orange: "#D09E88",
+  salmon: "#FADAD8",
+  blown: "#99665E",
+  black: "#534847",
+
+
+  //UI
   text: {
     high: "rgba(0,0,0,0.87)",
     medium: "rgba(0,0,0,0.6)",
