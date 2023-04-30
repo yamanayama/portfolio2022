@@ -8,6 +8,20 @@ import { color, typography, breakPoint } from '../../styles/constans'
 
 const Nav = ({ open, setOpen }) => {
   const router = useRouter();
+  const menu = [
+    {
+      id: 1,
+      name: "profile",
+    },
+    {
+      id: 2,
+      name: "skill",
+    },
+    {
+      id: 3,
+      name: "works",
+    }
+  ]
 
   return (
     <>
@@ -18,27 +32,19 @@ const Nav = ({ open, setOpen }) => {
               <a css={title}>Naomi <span css={titleLiner}>Murakami</span></a>
             </Link></div>
           <ul css={list}>
-            <li css={listItem}>
-              <Link href="/skill">
-                <a
-                  css={
-                    router.pathname.startsWith("/skill")
-                      ? current
-                      : nonCurrent
-                  }
-                >
-                  Skill</a></Link>
-            </li>
-            <li css={listItem}>
-              <Link href="/gohan"><a
-                css={
-                  router.pathname.startsWith("/works")
-                    ? current
-                    : nonCurrent
-                }
-              >
-                Works</a></Link>
-            </li>
+            {menu.map((item) => (
+              <li css={listItem} key={item.id}>
+                <Link href={item.name}>
+                  <a
+                    css={
+                      router.pathname.startsWith("/" + item.name)
+                        ? current
+                        : nonCurrent
+                    }
+                  >
+                    {item.name}</a></Link>
+              </li>
+            ))}
           </ul>
         </nav>
       )}

@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import { css } from "@emotion/react"
 
-import { typography, color, breakPoint } from '../../styles/constans.js'
+import { typography, color, breakPoint, contentWidth } from '../../styles/constans.js'
 
 const Breadcrumbs = ({ children, current, beforeName }) => {
   return (
@@ -24,7 +24,8 @@ const breadcrumb = css`
     font-size: ${typography.text.caption}px;
     gap: 8px;
     margin: 16px;
-    max-width: 1140px;
+    max-width: ${contentWidth};
+    color: ${color.gray[70]};
 
     @media (min-width: ${breakPoint}) {
         margin: 16px auto;

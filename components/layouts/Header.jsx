@@ -6,8 +6,8 @@ import { css } from '@emotion/react'
 import useMedia from "use-media";
 
 import { color, breakPoint } from '../../styles/constans'
-import Burger from './Burger'
-import Nav from './Nav'
+import Burger from './burger'
+import Nav from './nav'
 
 
 const Header = () => {

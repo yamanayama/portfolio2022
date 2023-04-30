@@ -2,7 +2,7 @@
 
 import { css } from "@emotion/react"
 
-import { typography, color } from '../../styles/constans.js'
+import { typography, contentWidth, breakPoint } from '../../styles/constans.js'
 
 const Jumbotron = ({ name }) => {
   return (
@@ -16,15 +16,23 @@ const Jumbotron = ({ name }) => {
 
 export default Jumbotron
 
-const jumbotron = (background) => css`
-      background: ${color.background} url('/images/jumbotron.jpg') center center / cover no-repeat ;
-      height: 30vh;
-      min-height: 360px;
-      max-width: 1536px;
-      display: grid;
-      place-content: center;
+
+const jumbotron = css`
+      max-width: ${contentWidth};
+      margin: 72px 16px 0;
+
+      @media (min-width: ${breakPoint}) {
+        margin: 94px auto 0;
+      }
       `
 
 const jumbotronTitle = css`
-      font-size: ${typography.text.headline3}px;
+      font-size: ${typography.text.headline4}px;
+      font-weight: bold;
+      letter-spacing: 0.2em;
+      text-align: left;
+      
+      @media (min-width: ${breakPoint}) {
+        font-size: ${typography.text.headline2}px;
+      }
       `

@@ -3,18 +3,17 @@
 
 import { css } from "@emotion/react"
 
-import Footer from '../components/layouts/Footer'
-import Header from '../components/layouts/Header'
+import Footer from '../components/layouts/footer'
+import Header from '../components/layouts/header'
+import Jumbotron from "../components/layouts/jumbotron";
 import { client } from "../libs/client";
-import { typography, color, breakPoint } from '../styles/constans.js'
+import { breakPoint, contentWidth } from '../styles/constans.js'
 
 const Custom404 = () => {
   return (
     <>
       <Header />
-      <div css={jumbotron}>
-        <h1 css={jumbotronTitle}>404 Not Found</h1>
-      </div>
+      <Jumbotron name="404 Not Found" />
 
       <main css={container}>
         すみません！お探しのページは見つかりませんでした。。<br />
@@ -23,7 +22,6 @@ const Custom404 = () => {
           twitter
         </a>
       </main>
-
       <Footer />
     </>
   );
@@ -51,36 +49,14 @@ export const getStaticProps = async () => {
   };
 };
 
-const jumbotron = css`
-      background: ${color.background} url('/images/jumbotron.jpg') center center / cover no-repeat ;
-      height: 30vh;
-      min-height: 360px;
-      max-width: 1536px;
-      display: grid;
-      place-content: center;
-      `
-
-
-const jumbotronTitle = css`
-      font-size: ${typography.text.headline3}px;
-      `
-
 
 const container = css`
       margin: auto;
-      max-width: 800px;
+      max-width: ${contentWidth};
       padding: 40px 16px;
 
       @media (min-width: ${breakPoint}) {
-        padding: 96px 24px;
+        padding: 96px 0;
       }
     `
 
-const rowBlock = css`
-    margin-top: 24px;
-
-    @media (min-width: ${breakPoint}) {
-        width: calc(50% - 24px);
-        margin-top: 0;
-      }
-`

@@ -3,7 +3,7 @@ import { css } from '@emotion/react'
 
 import FacebookIcon from "../../public/images/facebookIcon.svg";
 import TwitterIcon from "../../public/images/twitterIcon.svg";
-import { color, breakPoint, typography } from '../../styles/constans'
+import { color, breakPoint, typography, contentWidth } from '../../styles/constans'
 
 
 const Footer = () => {
@@ -55,7 +55,7 @@ const container = css`
 `;
 
 const inner = css`
-      max-width: 1140px;
+      max-width: ${contentWidth};
       margin: 0 auto 24px;
 `
 

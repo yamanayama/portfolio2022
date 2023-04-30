@@ -2,54 +2,37 @@
 
 import { css } from "@emotion/react"
 
-import Footer from '../components/layouts/Footer'
-import Header from '../components/layouts/Header'
-import { typography, color, breakPoint } from '../styles/constans.js'
+import Breadcrumbs from "../components/layouts/breadcrumbs";
+import Footer from '../components/layouts/footer'
+import Header from '../components/layouts/header'
+import Jumbotron from "../components/layouts/jumbotron";
+import { typography, color, breakPoint, contentWidth } from '../styles/constans.js'
 
 
-const Work = () => {
+const Works = () => {
   return (
     <>
       <Header />
-      <div css={jumbotron}>
-        <h1 css={jumbotronTitle}>Works</h1>
-      </div>
-
-      <div css={container}>
+      <Jumbotron name="Works" />
+      <Breadcrumbs current="works" />
+      <main css={container}>
         <h2 css={title}>comming soon</h2>
-        <p css={titleOption}>お問合せください</p>
-
-      </div>
-
+        <p css={titleOption}>少々お待ちください</p>
+      </main>
       <Footer />
     </>
   );
 }
 
-export default Work
-
-const jumbotron = css`
-      background: ${color.background} url('/images/jumbotron.jpg') center center / cover no-repeat ;
-      height: 30vh;
-      min-height: 360px;
-      max-width: 1536px;
-      display: grid;
-      place-content: center;
-      `
-
-
-const jumbotronTitle = css`
-      font-size: ${typography.text.headline3}px;
-      `
-
+export default Works
 
 const container = css`
       margin: auto;
-      max-width: 1140px;
-      padding: 40px 16px;
+      max-width: ${contentWidth};
+      padding: 60px 16px;
 
       @media (min-width: ${breakPoint}) {
-        padding: 96px 24px;
+        padding: 96px 0;
       }
     `
 

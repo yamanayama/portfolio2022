@@ -3,16 +3,11 @@
 
 import { css } from "@emotion/react"
 
-import Breadcrumbs from "../components/layouts/Breadcrumbs";
-import Footer from '../components/layouts/Footer'
-import Header from '../components/layouts/Header'
-import Jumbotron from "../components/layouts/Jumbotron";
-import CodeIcon from "../public/images/code.svg";
-import EditIcon from "../public/images/edit.svg";
-import ImageIcon from "../public/images/image.svg";
-import PieChartIcon from "../public/images/pie-chart.svg";
-import SmileIcon from "../public/images/smile.svg";
-import { typography, color, breakPoint } from '../styles/constans.js'
+import Breadcrumbs from "../components/layouts/breadcrumbs";
+import Footer from '../components/layouts/footer'
+import Header from '../components/layouts/header'
+import Jumbotron from "../components/layouts/jumbotron";
+import { typography, color, breakPoint, contentWidth } from '../styles/constans.js'
 
 
 const Skill = () => {
@@ -22,141 +17,103 @@ const Skill = () => {
       <Jumbotron name="Skill" />
       <Breadcrumbs current="skill" />
 
-      <div css={container}>
-        <h2 css={title}>ユーザーとビジネスを繋ぐ</h2>
-        <p css={titleOption}>Mission</p>
+      <main>
+        <div css={container}>
+          <h2 css={title}>ユーザーとビジネスを繋ぐ</h2>
+          <p css={titleOption}>Mission</p>
 
-        <p style={{ marginTop: 16 }}>っっっっw</p>
-        <p>っっっっw</p>
-        <p>っっっっw</p>
-      </div>
+          <p style={{ marginTop: 16 }}></p>
+          <p>っっっっw</p>
+          <p>っっっっw</p>
+        </div>
 
-      <div css={containerInBox}>
-        <div css={inner}>
-          <h2 css={title}>提供価値</h2>
-          <p css={titleOption}>Value</p>
+        <div css={containerInBox}>
+          <div css={inner}>
+            <h2 css={title}>提供価値</h2>
+            <p css={titleOption}>Value</p>
+            <div css={rowContainer}>
+              <div css={rowBlock}>
+                <h3 css={subTitle}>サブタイトル</h3>
+                <p style={{ marginTop: 16 }}>っっっっw</p>
+                <p>っっっっw</p>
+                <p>っっっっw</p>
+              </div>
+              <div css={rowBlock}>
+                <h3 css={subTitle}>サブタイトル</h3>
+                <p style={{ marginTop: 16 }}>っっっっw</p>
+                <p>っっっっw</p>
+                <p>っっっっw</p>
+              </div>
+
+              <div css={rowBlock}>
+                <h3 css={subTitle}>サブタイトル</h3>
+                <p style={{ marginTop: 16 }}>っっっっw</p>
+                <p>っっっっw</p>
+                <p>っっっっw</p>
+              </div>
+              <div css={rowBlock}>
+                <h3 css={subTitle}>サブタイトル</h3>
+                <p style={{ marginTop: 16 }}>っっっっw</p>
+                <p>っっっっw</p>
+                <p>っっっっw</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div css={container}>
+          <h2 css={title}>業務経験・スキル</h2>
+          <p css={titleOption}>Skills</p>
+          <p style={{ marginTop: 32 }}>新規事業開発チームにてUXリサーチ、仮説検証、MVP開発を行なっています。<br />
+            また、半年ほど社内のUXリサーチ普及活動にも携わり、<br />さまざまな事業部へ社内コンサルタントとしてリサーチを牽引しています。</p>
+
+          <p style={{ marginTop: 16 }}>開発面では、スクラム形式での開発を行なっており、UXリサーチで洗い出した仮説を元に、<br />UI設計からReactでの実装や、ノーコード開発を行なっています。</p>
+
+
           <div css={rowContainer}>
             <div css={rowBlock}>
-              <h3 css={subTitle}>サブタイトル</h3>
-              <p style={{ marginTop: 16 }}>っっっっw</p>
-              <p>っっっっw</p>
-              <p>っっっっw</p>
+              <p css={rowTitle}>
+                🔍 UXリサーチ</p>
             </div>
             <div css={rowBlock}>
-              <h3 css={subTitle}>サブタイトル</h3>
-              <p style={{ marginTop: 16 }}>っっっっw</p>
-              <p>っっっっw</p>
-              <p>っっっっw</p>
-            </div>
-
-            <div css={rowBlock}>
-              <h3 css={subTitle}>サブタイトル</h3>
-              <p style={{ marginTop: 16 }}>っっっっw</p>
-              <p>っっっっw</p>
-              <p>っっっっw</p>
+              <p css={rowTitle}>
+                📐 UI作成（Figmaなど）</p>
             </div>
             <div css={rowBlock}>
-              <h3 css={subTitle}>サブタイトル</h3>
-              <p style={{ marginTop: 16 }}>っっっっw</p>
-              <p>っっっっw</p>
-              <p>っっっっw</p>
+              <p css={rowTitle}>
+                👩‍💻 React/TypeScript/emotion</p>
+            </div>
+            <div css={rowBlock}>
+              <p css={rowTitle}>
+                🏃 スクラム開発</p>
+            </div>
+            <div css={rowBlock}>
+              <p css={rowTitle}>
+                📊 グロースハック</p>
+            </div>
+            <div css={rowBlock}>
+              <p css={rowTitle}>
+                🧪 ABテスト</p>
+            </div>
+            <div css={rowBlock}>
+              <p css={rowTitle}>
+                🎨 ゲームイラスト</p>
+            </div>
+            <div css={rowBlock}>
+              <p css={rowTitle}>
+                🐰アニメーション</p>
             </div>
           </div>
         </div>
-      </div>
 
-      <div css={container}>
-        <h2 css={title}>業務経験・スキル</h2>
-        <p css={titleOption}>Skills</p>
-        <p style={{ marginTop: 32 }}>新規事業開発チームにてUXリサーチ、仮説検証、MVP開発を行なっています。<br />
-          また、半年ほど社内のUXリサーチ普及活動にも携わり、<br />さまざまな事業部へ社内コンサルタントとしてリサーチを牽引しています。</p>
-
-        <p style={{ marginTop: 16 }}>開発面では、スクラム形式での開発を行なっており、UXリサーチで洗い出した仮説を元に、<br />UI設計からReactでの実装や、ノーコード開発を行なっています。</p>
-
-
-        <div css={rowContainer}>
-          <div css={rowBlock}>
-            <p css={rowTitle}>
-              <EditIcon
-                width={24}
-                height={24}
-                fill={color.background}
-                css={iconStyle}
-              ></EditIcon>UXリサーチ</p>
-          </div>
-          <div css={rowBlock}>
-            <p css={rowTitle}>
-              <EditIcon
-                width={24}
-                height={24}
-                fill={color.background}
-                css={iconStyle}
-              ></EditIcon>UI作成（Figmaなど）</p>
-          </div>
-          <div css={rowBlock}>
-            <p css={rowTitle}>
-              <CodeIcon
-                width={24}
-                height={24}
-                fill={color.background}
-                css={iconStyle}
-              ></CodeIcon>React/TypeScript/emotion</p>
-          </div>
-          <div css={rowBlock}>
-            <p css={rowTitle}>
-              <CodeIcon
-                width={24}
-                height={24}
-                fill={color.background}
-                css={iconStyle}
-              ></CodeIcon>スクラム開発</p>
-          </div>
-          <div css={rowBlock}>
-            <p css={rowTitle}>
-              <PieChartIcon
-                width={24}
-                height={24}
-                fill={color.background}
-                css={iconStyle}
-              ></PieChartIcon>グロースハック</p>
-          </div>
-          <div css={rowBlock}>
-            <p css={rowTitle}>
-              <PieChartIcon
-                width={24}
-                height={24}
-                fill={color.background}
-                css={iconStyle}
-              ></PieChartIcon>ABテスト</p>
-          </div>
-          <div css={rowBlock}>
-            <p css={rowTitle}>
-              <ImageIcon
-                width={24}
-                height={24}
-                fill={color.background}
-                css={iconStyle}
-              ></ImageIcon>ゲームイラスト</p>
-          </div>
-          <div css={rowBlock}>
-            <p css={rowTitle}>
-              <SmileIcon
-                width={24}
-                height={24}
-                fill={color.background}
-                css={iconStyle}
-              ></SmileIcon>アニメーション</p>
+        <div css={containerInBox}>
+          <div css={inner}>
+            <h2 css={title}>経験不足な領域</h2>
+            <p css={titleOption}>Lack of experience</p>
+            <p css={textBox}>マネジメント、ブランディング、マス広告などのグラフィックデザイン</p>
           </div>
         </div>
-      </div>
-
-      <div css={containerInBox}>
-        <div css={inner}>
-          <h2 css={title}>経験不足な領域</h2>
-          <p css={titleOption}>Lack of experience</p>
-          <p css={textBox}>マネジメント、ブランディング、マス広告などのグラフィックデザイン</p>
-        </div>
-      </div>
+      </main>
 
       <Footer />
     </>
@@ -165,22 +122,9 @@ const Skill = () => {
 
 export default Skill
 
-const jumbotron = css`
-      background: ${color.background} url('/images/jumbotron.jpg') center center / cover no-repeat ;
-      height: 30vh;
-      min-height: 360px;
-      max-width: 1536px;
-      display: grid;
-      place-content: center;
-      `
-
-const jumbotronTitle = css`
-      font-size: ${typography.text.headline3}px;
-      `
-
 const container = css`
       margin: auto;
-      max-width: 1164px;
+      max-width: ${contentWidth};
       padding: 64px 16px;
 
       @media (min-width: ${breakPoint}) {

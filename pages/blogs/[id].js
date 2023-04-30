@@ -4,102 +4,102 @@ import Router from 'next/router'
 
 import { css } from "@emotion/react"
 
-import Button from '../../components/elements/Button'
-import Breadcrumbs from "../../components/layouts/Breadcrumbs";
-import Footer from '../../components/layouts/Footer'
-import Header from '../../components/layouts/Header'
+import Button from '../../components/elements/button'
+import Breadcrumbs from "../../components/layouts/breadcrumbs";
+import Footer from '../../components/layouts/footer'
+import Header from '../../components/layouts/header'
 import { client } from "../../libs/client";
-import { typography, color, breakPoint } from '../../styles/constans.js'
+import { typography, color, breakPoint, contentWidth } from '../../styles/constans.js'
 
-const BlogId = ({ blog, tag }) => {
+const BlogId = ({ blog }) => {
   return (
     <>
       <Header />
+      <main>
+        <div css={container}>
+          <Breadcrumbs current={blog.title} beforeName="works" />
 
-      <div css={container}>
-        <Breadcrumbs current={blog.title} beforeName="works" />
+          <picture css={imageWrap}>
+            <Image
+              css={eyecatchImage}
+              src={blog.eyecatch.url}
+              alt="画像1"
+              width={contentWidth}
+              height={480}
+            />
+          </picture>
+          <div css={articleContainer}>
+            <div css={articleBox}>
+              <p css={year}>{blog.year}</p>
+              <h2 css={title}>{blog.title}</h2>
+              <div css={categoryTag}>
+                <div css={categoryName}>
 
-        <picture css={imageWrap}>
-          <Image
-            css={eyecatchImage}
-            src={blog.eyecatch.url}
-            alt="画像1"
-            width={1140}
-            height={480}
-          />
-        </picture>
-        <div css={articleContainer}>
-          <div css={articleBox}>
-            <p css={year}>{blog.year}</p>
-            <h2 css={title}>{blog.title}</h2>
-            <div css={categoryTag}>
-              <div css={categoryName}>
-
+                </div>
               </div>
-            </div>
-            <h3 css={subTitle} style={{ marginTop: 32 }}>Summary</h3>
-            <div style={{ marginTop: 12 }}>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: `${blog.conceptText}`,
-                }} />
-            </div>
-            <h4 css={subTitle} style={{ marginTop: 32 }}>Role</h4>
-            <div style={{ marginTop: 12 }}>
-              {blog.tags.map((item, key) => {
-                return (
-                  <span css={role} key={key}>{item.name}</span>
-                );
-              })}</div>
-
-            {blog?.processImage?.url !== undefined && (
-              <picture css={imageBox}>
-                <Image
-                  src={blog?.processImage?.url}
-                  css={eyecatchImage}
-                  alt="画像1"
-                  width={800}
-                  height={480}
-                />
-              </picture>
-            )}
-
-            {blog.processText !== undefined && (
-              <div css={articleBox}>
+              <h3 css={subTitle} style={{ marginTop: 32 }}>Summary</h3>
+              <div style={{ marginTop: 12 }}>
                 <div
                   dangerouslySetInnerHTML={{
-                    __html: `${blog.processText}`,
+                    __html: `${blog.conceptText}`,
                   }} />
               </div>
-            )}
+              <h4 css={subTitle} style={{ marginTop: 32 }}>Role</h4>
+              <div style={{ marginTop: 12 }}>
+                {blog.tags.map((item, key) => {
+                  return (
+                    <span css={role} key={key}>{item.name}</span>
+                  );
+                })}</div>
 
-            {blog?.messageImage?.url !== undefined && (
-              <picture css={imageBox}>
-                <Image
-                  src={blog?.messageImage?.url}
-                  css={eyecatchImage}
-                  alt="画像2"
-                  width={800}
-                  height={480}
-                />
-              </picture>
-            )}
-            {blog.messageText !== undefined && (
-              <div css={articleBox}>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: `${blog.messageText}`,
-                  }} />
-              </div>
-            )}
+              {blog?.processImage?.url !== undefined && (
+                <picture css={imageBox}>
+                  <Image
+                    src={blog?.processImage?.url}
+                    css={eyecatchImage}
+                    alt="画像1"
+                    width={800}
+                    height={480}
+                  />
+                </picture>
+              )}
+
+              {blog.processText !== undefined && (
+                <div css={articleBox}>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: `${blog.processText}`,
+                    }} />
+                </div>
+              )}
+
+              {blog?.messageImage?.url !== undefined && (
+                <picture css={imageBox}>
+                  <Image
+                    src={blog?.messageImage?.url}
+                    css={eyecatchImage}
+                    alt="画像2"
+                    width={800}
+                    height={480}
+                  />
+                </picture>
+              )}
+              {blog.messageText !== undefined && (
+                <div css={articleBox}>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: `${blog.messageText}`,
+                    }} />
+                </div>
+              )}
+            </div>
           </div>
-        </div>
-        <div css={buttonArea}>
-          <Button type="button" onClick={() => Router.push('/gohan')}>一覧へ戻る</Button>
-        </div>
+          <div css={buttonArea}>
+            <Button type="button" onClick={() => Router.push('/gohan')}>一覧へ戻る</Button>
+          </div>
 
-      </div>
-
+        </div>
+      </main>
       <Footer />
     </>
   );
@@ -131,7 +131,7 @@ export const getStaticProps = async (context) => {
 
 const container = css`
       margin: 64px 16px;
-      max-width: 1140px;
+      max-width: ${contentWidth};
 
       @media (min-width: ${breakPoint}) {
         margin: 96px auto;
@@ -207,5 +207,6 @@ const eyecatchImage = css`
       `
 
 const buttonArea = css`
-      margin-top: 64px;
+      margin: 64px auto 0;
+      text-align: center;
       `
