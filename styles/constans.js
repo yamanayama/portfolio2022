@@ -1,5 +1,5 @@
 export const breakPoint = "751px";
-export const contentWidth = "1160px";
+export const contentWidth = "1120px";
 
 export const color = {
   black: "#000",
