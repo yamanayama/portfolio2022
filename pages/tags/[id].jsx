@@ -3,13 +3,13 @@
 import { css } from "@emotion/react"
 
 import Breadcrumbs from "../../components/layouts/breadcrumbs";
-import Card from "../../components/layouts/card"
+import Card from "../../components/layouts/card";
 import Footer from "../../components/layouts/footer";
-import Header from '../../components/layouts/header'
+import Header from '../../components/layouts/header';
 import Jumbotron from "../../components/layouts/jumbotron";
 import Side from "../../components/layouts/side";
 import { client } from "../../libs/client";
-import { breakPoint, contentWidth } from '../../styles/constans.js'
+import { breakPoint, contentWidth } from '../../styles/constans.js';
 
 const TagsId = ({ data, tagName, tagNameList }) => {
   return (

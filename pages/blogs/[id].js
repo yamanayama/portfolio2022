@@ -1,15 +1,15 @@
 /** @jsxImportSource @emotion/react */
 import Image from "next/image";
-import Router from 'next/router'
+import Router from 'next/router';
 
-import { css } from "@emotion/react"
+import { css } from "@emotion/react";
 
-import Button from '../../components/elements/button'
+import Button from '../../components/elements/button';
 import Breadcrumbs from "../../components/layouts/breadcrumbs";
-import Footer from '../../components/layouts/footer'
-import Header from '../../components/layouts/header'
+import Footer from '../../components/layouts/footer';
+import Header from '../../components/layouts/header';
 import { client } from "../../libs/client";
-import { typography, color, breakPoint, contentWidth } from '../../styles/constans.js'
+import { typography, color, breakPoint, contentWidth } from '../../styles/constans.js';
 
 const BlogId = ({ blog }) => {
   return (
