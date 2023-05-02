@@ -134,8 +134,8 @@ const Home = () => {
 export default Home
 
 const FirstView = css`
-      background: ${color.background} url('/images/noelthecat4.jpg') center center / cover no-repeat ;
-      height: 93vh;
+      background: ${color.background} url('/images/hero.jpg') center center / cover no-repeat ;
+      height: 100vh;
       min-height: 300px;
       `
 
