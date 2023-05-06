@@ -29,7 +29,7 @@ const Nav = ({ open, setOpen }) => {
         <nav css={navi}>
           <div css={naviLogo}>
             <Link href="/">
-              <a css={title}>Naomi <span css={titleLiner}>Murakami</span></a>
+              <a css={title}>Naomi Murakami</a>
             </Link></div>
           <ul css={list}>
             {menu.map((item) => (
@@ -137,8 +137,4 @@ const title = css`
     @media (min-width: ${breakPoint}) {
       font-size:${typography.text.body1}px;
     }
-      `
-
-const titleLiner = css`
-      font-weight: 200;
       `

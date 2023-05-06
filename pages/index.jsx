@@ -7,12 +7,20 @@ import { css } from "@emotion/react"
 import Button from '../components/elements/button'
 import Footer from '../components/layouts/footer'
 import Header from '../components/layouts/header'
+import Seo from "../components/layouts/seo"
 import { typography, color, breakPoint, contentWidth } from '../styles/constans.js'
 
 
 const Home = () => {
   return (
     <>
+      <Seo
+        pageTitle={'Naomi Murakami portfolio'}
+        pageDescription={'村上奈緒美のポートフォリオサイトです。'}
+        pageImg={'https://portfolio2022-pi-ten.vercel.app/ogp.jpg'}
+        pageImgWidth={1200}
+        pageImgHeight={675}
+      />
       <Header />
       <main>
         <div css={FirstView}>
@@ -20,7 +28,7 @@ const Home = () => {
             <div css={catchCopy}>
               <div css={catchCopyBlock}>
                 <div css={catchCopySubTitle}>Hello,</div>
-                <div css={catchCopyTitle}>Naomi <span css={catchCopyTitleLiner}>Murakami</span></div>
+                <div css={catchCopyTitle}>Naomi Murakami</div>
               </div>
               <p css={catchCopyText}>UI/UX/Product designer</p>
             </div>
@@ -32,15 +40,13 @@ const Home = () => {
           <p css={titleOption}>はじめまして</p>
 
           <div css={profileBlock}>
-            <div css={profileImageWrap}>
-              <Image
-                css={profileImage}
-                src="/images/profile1.jpg"
-                alt="profile"
-                width={328}
-                height={400}
-              />
-            </div>
+            <Image
+              css={profileImage}
+              src="/images/profileTop.jpg"
+              alt="profile"
+              width={350}
+              height={400}
+            />
             <div css={profileText}>
               <h3 css={nameTitle}>Naomi Murakami<br />
                 <small css={subTitleSmall}>村上 奈緒美 / Designer</small></h3>
@@ -50,7 +56,7 @@ const Home = () => {
                 現在は事業会社のUIUXデザイナーです。<br />
                 UXリサーチからUI制作、フロントエンド実装まで幅広く担当します。</p>
 
-              <p style={{ marginTop: 16 }}>好きなものは猫、コーヒー、激辛料理。<br />
+              <p style={{ marginTop: 16 }}>好きなものは猫、マインクラフト、コーヒー、激辛料理。<br />
                 最近は3Dと東海オンエアにはまっています。<br />
                 現在は子育てに奮闘中🔥</p>
               <div css={profileButtonArea}>
@@ -69,8 +75,7 @@ const Home = () => {
             <div css={textBlock}>
               <div css={textBox}>
                 <h3 css={subTitle} style={{ marginTop: 32 }}>より良い社会を作る</h3>
-                <p style={{ marginTop: 16 }}>元々「社会に必要とされる人間になりたい」という想いが強く、<br />
-                  右耳が聞こえないことから、いつか社会福祉に携わりたいと考えていましたが、<br />
+                <p style={{ marginTop: 16 }}>元々「社会に必要とされる人間になりたい」という想いが強かったのですが、<br />
                   現在は子供が生まれ、「この子が安心して、幸せに暮らせる社会を作りたい」という想いに変化しました。</p>
                 <p style={{ marginTop: 16 }}>例えば日常生活、医療、食、お金、遊びなど、生きていく中での悩みや不安に寄り添い、<br />
                   解決への手助けをしていけるようなプロダクトを作ることで、社会貢献していきたいと考えています。</p>
@@ -94,31 +99,27 @@ const Home = () => {
 
           <div css={rowContainer}>
             <div css={rowBlock}>
-              <h3 css={subTitle}>サブタイトル</h3>
-              <p style={{ marginTop: 16 }}>っっっっw</p>
-              <p>っっっっw</p>
-              <p>っっっっw</p>
+              <h3 css={subTitle}>リサーチから画面設計、実装まで</h3>
+              <p style={{ marginTop: 16 }}>課題に対する問いの立案から始め、調査設計書の作成とリサーチ、UI作成、Reactなどの実装までワンストップで行います。<br />
+                リサーチからUIまでを一人で行うことで、プロトタイプの仮説検証サイクルを高速で回すことが可能です。</p>
             </div>
             <div css={rowBlock}>
-              <h3 css={subTitle}>サブタイトル</h3>
-              <p style={{ marginTop: 16 }}>っっっっw</p>
-              <p>っっっっw</p>
-              <p>っっっっw</p>
+              <h3 css={subTitle}>スタートアップも、グロースアップも</h3>
+              <p style={{ marginTop: 16 }}>リーンスタートアップの開発手法に則ったMVP開発の経験から、既存サービスのABテスト、グロースアップも経験しています。</p>
+              <p>特に不確実性の高いスタートアップでは「プロダクトを作っては壊す」を繰り返しますが、それを楽しむマインドも持っています。</p>
             </div>
           </div>
 
           <div css={rowContainer}>
             <div css={rowBlock}>
-              <h3 css={subTitle}>サブタイトル</h3>
-              <p style={{ marginTop: 16 }}>っっっっw</p>
-              <p>っっっっw</p>
-              <p>っっっっw</p>
+              <h3 css={subTitle}>他職種とのチーム開発が大好き</h3>
+              <p style={{ marginTop: 16 }}>デザインとリサーチの民主化を心がけ、作ったもの、調査したものはスピーディに共有します。</p>
+              <p>エンジニアやマーケターとの協業が得意で、全員でプロダクトを前に進めることを意識しています。</p>
             </div>
             <div css={rowBlock}>
-              <h3 css={subTitle}>サブタイトル</h3>
-              <p style={{ marginTop: 16 }}>っっっっw</p>
-              <p>っっっっw</p>
-              <p>っっっっw</p>
+              <h3 css={subTitle}>デザインチームの推進</h3>
+              <p style={{ marginTop: 16 }}>自分自身のスキルアップはもちろん、「みんなで強くなる」ために、社内外でのデザイナー向けの勉強会、イベントの登壇や運営をしています。</p>
+              <p>0から物事を進めることが得意で、直近で行っていたUXリサーチの推進活動では、様々な事業部にてリサーチを導入させていただきました。</p>
             </div>
           </div>
           <div css={valueButtonArea}>
@@ -151,7 +152,7 @@ const hero = css`
       `
 
 const catchCopy = css`
-      padding: 24px;
+      padding: 0 24px 24px;
       `
 
 const catchCopyBlock = css`
@@ -166,11 +167,6 @@ const catchCopySubTitle = css`
 const catchCopyTitle = css`
       font-size: ${typography.text.headline2}px;
       font-weight: bold;
-      `
-
-const catchCopyTitleLiner = css`
-      font-size: ${typography.text.headline2}px;
-      font-weight: 200;
       `
 
 const catchCopyText = css`
@@ -198,7 +194,6 @@ const containerInBox = css`
     @media (min-width: ${breakPoint}) {
       padding: 96px 0;
     }
-
   `
 
 const inner = css`
@@ -254,23 +249,6 @@ const profileText = css`
         width: calc(100% - 328px - 64px);
     }
       `
-
-const profileImageWrap = css`
-      position: relative;
-
-      &::before{
-        content: '';
-        background-color: ${color.salmon};
-        position: absolute;
-        left: 24px;
-        top: 16px;
-        width: 328px;
-        height: 400px;
-        z-index: -1;
-      border-radius: 24px;
-
-      }
-    `
 
 const profileImage = css`
       width: min(100%,328px);

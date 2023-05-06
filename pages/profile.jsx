@@ -24,45 +24,42 @@ const Profile = () => {
               css={profileImage}
               src="/images/profile1.jpg"
               alt="profile"
-              width={352}
+              width={542}
               height={400}
             />
 
             <div css={profileText}>
               <h3 css={nameTitle}>Naomi Murakami<br />
                 <small css={subTitleSmall}>村上 奈緒美 / Designer</small></h3>
+              <div css={textBox}>
+                <p>
+                  広告系の専門学校を卒業後、絵の具の販売員やゲームイラストレーターを経て、WEB業界へ。
+                  現在は事業会社のUIUXデザイナーです。<br />
+                  UXリサーチからUI制作、フロントエンド実装まで幅広く担当します。</p>
 
-              <p style={{ marginTop: 40 }}>
-                広告系の専門学校を卒業後、絵の具の販売員やゲームイラストレーターを経て、WEB業界へ。
-                現在は事業会社のUIUXデザイナーです。<br />
-                UXリサーチからUI制作、フロントエンド実装まで幅広く担当します。</p>
-
-              <p style={{ marginTop: 16 }}>好きなものは猫、コーヒー、激辛料理。<br />
-                最近は3Dと東海オンエアにはまっています。<br />
-                現在は子育てに奮闘中🔥</p>
+                <p style={{ marginTop: 16 }}>好きなものは猫、コーヒー、激辛料理。<br />
+                  最近は3Dと東海オンエアにはまっています。<br />
+                  現在は子育てに奮闘中🔥</p>
+              </div>
 
             </div>
           </div>
 
           <div css={profileBlock}>
             <div css={profileText}>
-              <h3 css={nameTitle}>Naomi Murakami</h3>
-
-              <p style={{ marginTop: 40 }}>
-                広告系の専門学校を卒業後、絵の具の販売員やゲームイラストレーターを経て、WEB業界へ。
-                現在は事業会社のUIUXデザイナーです。<br />
-                UXリサーチからUI制作、フロントエンド実装まで幅広く担当します。</p>
-
-              <p style={{ marginTop: 16 }}>好きなものは猫、コーヒー、激辛料理。<br />
-                最近は3Dと東海オンエアにはまっています。<br />
-                現在は子育てに奮闘中🔥</p>
-
+              <h3 css={profileTitle}>モットーは、<br />明るく、楽しく、元気よく</h3>
+              <div css={textBox}>
+                <p>一人でもくもく作るのも大好きだけど、<br />やっぱりチームでものを作るのが好き！</p>
+                <p style={{ marginTop: 16 }}>平和主義で協調性が高く、フォロワーシップが強い性格ですが、
+                  仲間を集め、0から物事をスタートさせることも得意です。</p>
+                <p>逆に言えば、トップダウン的な強いリーダーシップの発揮は苦手です。</p>
+              </div>
             </div>
             <Image
               css={profileImage}
-              src="/images/profile1.jpg"
+              src="/images/profile2.jpg"
               alt="profile"
-              width={352}
+              width={542}
               height={400}
             />
           </div>
@@ -70,93 +67,50 @@ const Profile = () => {
           <div css={profileBlock}>
             <Image
               css={profileImage}
-              src="/images/profile1.jpg"
+              src="/images/profile3.jpg"
               alt="profile"
-              width={352}
+              width={542}
               height={400}
             />
 
             <div css={profileText}>
-              <h3 css={nameTitle}>Naomi Murakami<br />
-                <small css={subTitleSmall}>村上 奈緒美 / Designer</small></h3>
-
-              <p style={{ marginTop: 40 }}>
-                広告系の専門学校を卒業後、絵の具の販売員やゲームイラストレーターを経て、WEB業界へ。
-                現在は事業会社のUIUXデザイナーです。<br />
-                UXリサーチからUI制作、フロントエンド実装まで幅広く担当します。</p>
-
-              <p style={{ marginTop: 16 }}>好きなものは猫、コーヒー、激辛料理。<br />
-                最近は3Dと東海オンエアにはまっています。<br />
-                現在は子育てに奮闘中🔥</p>
-
-            </div>
-          </div>
-        </div>
-
-
-        <div css={containerInBox}>
-          <div css={inner}>
-            <h2 css={title}>提供価値</h2>
-            <p css={titleOption}>Value</p>
-            <div css={rowContainer}>
-              <div css={rowBlock}>
-                <h3 css={subTitle}>サブタイトル</h3>
-                <p style={{ marginTop: 16 }}>っっっっw</p>
-                <p>っっっっw</p>
-                <p>っっっっw</p>
+              <h3 css={profileTitle}>ステージが変わっても<br />走り続ける</h3>
+              <div css={textBox}>
+                <p>今まで好き勝手に走っていた自分にも子供が生まれ、「母親」の役割ができました。</p>
+                <p style={{ marginTop: 16 }}>子供はとても可愛いらしく、何よりも大切な存在です。<br />
+                  ですが、子供を理由にキャリアを諦めたくありません。</p>
+                <p style={{ marginTop: 16 }}>人生のステージが変わろうと、私は私のキャリアを全力で走り続けます。</p>
               </div>
-              <div css={rowBlock}>
-                <h3 css={subTitle}>サブタイトル</h3>
-                <p style={{ marginTop: 16 }}>っっっっw</p>
-                <p>っっっっw</p>
-                <p>っっっっw</p>
-              </div>
-
-              <div css={rowBlock}>
-                <h3 css={subTitle}>サブタイトル</h3>
-                <p style={{ marginTop: 16 }}>っっっっw</p>
-                <p>っっっっw</p>
-                <p>っっっっw</p>
-              </div>
-              <div css={rowBlock}>
-                <h3 css={subTitle}>サブタイトル</h3>
-                <p style={{ marginTop: 16 }}>っっっっw</p>
-                <p>っっっっw</p>
-                <p>っっっっw</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div css={container}>
-          <h2 css={title}>業務経験・スキル</h2>
-          <p css={titleOption}>Skills</p>
-          <p style={{ marginTop: 32 }}>新規事業開発チームにてUXリサーチ、仮説検証、MVP開発を行なっています。<br />
-            また、半年ほど社内のUXリサーチ普及活動にも携わり、<br />さまざまな事業部へ社内コンサルタントとしてリサーチを牽引しています。</p>
-
-          <p style={{ marginTop: 16 }}>開発面では、スクラム形式での開発を行なっており、UXリサーチで洗い出した仮説を元に、<br />UI設計からReactでの実装や、ノーコード開発を行なっています。</p>
-
-
-          <div css={rowContainer}>
-            <div css={rowBlock}>
-              <p css={rowTitle}>
-                UXリサーチ</p>
-            </div>
-            <div css={rowBlock}>
-              <p css={rowTitle}>
-                UI作成（Figmaなど）</p>
             </div>
           </div>
         </div>
 
         <div css={containerInBox}>
           <div css={inner}>
-            <h2 css={title}>経験不足な領域</h2>
-            <p css={titleOption}>Lack of experience</p>
-            <p css={textBox}>マネジメント、ブランディング、マス広告などのグラフィックデザイン</p>
+            <h2 css={title}>Ideal</h2>
+            <p css={titleOption}>理想の姿</p>
+            <div css={textBlock}>
+              <div css={textBox}>
+                <h3 css={subTitle} style={{ marginTop: 32 }}>より良い社会を作る</h3>
+                <p style={{ marginTop: 16 }}>元々「社会に必要とされる人間になりたい」という想いが強く、<br />
+                  右耳が聞こえないことから、いつか社会福祉に携わりたいと考えていましたが、<br />
+                  現在は子供が生まれ、「この子が安心して、幸せに暮らせる社会を作りたい」という想いに変化しました。</p>
+                <p style={{ marginTop: 16 }}>例えば日常生活、医療、食、お金、遊びなど、生きていく中での悩みや不安に寄り添い、<br />
+                  解決への手助けをしていけるようなプロダクトを作ることで、社会貢献していきたいと考えています。</p>
+              </div>
+
+              <div css={textBox}>
+                <h3 css={subTitle}>デザイナーの価値を向上させる</h3>
+                <p style={{ marginTop: 16 }}>デザインにはプロダクトを前進させる力があります。<br />
+                  それはデザインが表層だけではなく、プロダクトを通し、ユーザーの悩みを解決することで、<br />
+                  ユーザーの生活や行動を変える力があるからです。</p>
+                <p style={{ marginTop: 16 }}>ですが、日本の組織ではまだまだデザインの価値は低く、デザイナーの給与は低いです。</p>
+                <p style={{ marginTop: 16 }}>私はデザイナーの価値を向上させ、給与水準を上げていきます。</p>
+              </div>
+            </div>
           </div>
         </div>
-      </main>
+      </main >
       <Footer />
     </>
   );
@@ -176,18 +130,17 @@ const container = css`
         `
 
 const containerInBox = css`
-        background: ${color.gray[10]};
+        background: ${color.white};
         margin: auto;
-        padding: 64px 0;
+        padding: 60px 16px;
 
         @media (min-width: ${breakPoint}) {
           padding: 96px 0;
-    }
-
-        `
+        }
+      `
 
 const inner = css`
-        max-width: ${contentWidth}px;
+        max-width: ${contentWidth};
         margin: auto;
         padding: 0 16px;
 
@@ -198,14 +151,14 @@ const inner = css`
         `
 
 const title = css`
-        font-size: ${typography.text.headline4}px;
+        font-size: ${typography.text.headline3}px;
         font-weight: bold;
         letter-spacing: 0.1em;
         line-height: 1.3;
         `
 
-const titleOption = (textcolor) => css`
-        color: ${textcolor === "background" ? color.salmon : color.blown};
+const titleOption = css`
+        color: ${color.blown};
         font-size: ${typography.text.caption}px;
         letter-spacing: 0.1em;
         `
@@ -215,42 +168,22 @@ const subTitle = css`
         font-weight: bold;
         `
 
-const rowTitle = css`
-        font-size: ${typography.text.headline5}px;
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        `
+const textBlock = css`
+      margin-top: 32px;
+
+      @media (min-width: ${breakPoint}) {
+        margin-top: 56px;
+      }
+      `
 
 const textBox = css`
         margin-top:24px;
 
         @media (min-width: ${breakPoint}) {
-          margin-top:64px;
+          margin-top:40px;
       }
         `
 
-const rowContainer = css`
-
-        @media (min-width: ${breakPoint}) {
-          display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 24px;
-        margin-top:64px;
-    }
-        `
-
-
-const rowBlock = css`
-        margin-top: 24px;
-
-        @media (min-width: ${breakPoint}) {
-          width: calc(50% - 24px);
-        margin-top: 0;
-      }
-        `
 
 const profileBlock = css`
 
@@ -275,7 +208,8 @@ const profileText = css`
   
         @media (min-width: ${breakPoint}) {
           margin-top: 0;
-          width: calc(100% - 352px - 32px);
+          padding-top: 24px;
+          width: calc(100% - 542px - 32px);
       }
         `
 
@@ -289,6 +223,11 @@ const nameTitle = css`
       font-size: ${typography.text.headline4}px;
       font-weight: bold;
       line-height: 1;
+      `
+
+const profileTitle = css`
+      font-size: ${typography.text.headline4}px;
+      font-weight: bold;
       `
 
 const subTitleSmall = css`
