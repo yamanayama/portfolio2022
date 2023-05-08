@@ -135,9 +135,13 @@ const Home = () => {
 export default Home
 
 const FirstView = css`
-      background: ${color.background} url('/images/hero.jpg') center center / cover no-repeat ;
+      background: ${color.background} url('/images/heroSp.jpg') center center / cover no-repeat ;
       height: 100vh;
       min-height: 300px;
+
+      @media (min-width: ${breakPoint}) {
+        background: ${color.background} url('/images/hero.jpg') center center / cover no-repeat ;
+      }
       `
 
 const hero = css`
