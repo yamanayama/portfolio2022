@@ -7,12 +7,20 @@ import Breadcrumbs from "../components/layouts/breadcrumbs";
 import Footer from '../components/layouts/footer'
 import Header from '../components/layouts/header'
 import Jumbotron from "../components/layouts/jumbotron";
+import Seo from "../components/layouts/seo"
 import { typography, color, breakPoint, contentWidth } from '../styles/constans.js'
 
 
 const Profile = () => {
   return (
     <>
+      <Seo
+        pageTitle={'profile'}
+        pageDescription={'村上奈緒美の自己紹介です'}
+        pageImg={'https://portfolio2022-pi-ten.vercel.app/images/ogp.jpg'}
+        pageImgWidth={1200}
+        pageImgHeight={675}
+      />
       <Header />
       <Jumbotron name="Profile" />
       <Breadcrumbs current="profile" />

@@ -8,7 +8,7 @@ const Seo = ({
   pageImgWidth,
   pageImgHeight
 }) => {
-  const defaultTitle = ''
+  const defaultTitle = 'Naomi Murakami portfolio'
   const defaultDescription = '村上奈緒美のポートフォリオサイトです。'
 
   const title = pageTitle ? `${pageTitle} | ${defaultTitle}` : defaultTitle
