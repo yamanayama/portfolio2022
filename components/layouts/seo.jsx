@@ -8,15 +8,15 @@ const Seo = ({
   pageImgWidth,
   pageImgHeight
 }) => {
-  const defaultTitle = 'demo'
-  const defaultDescription = 'demo'
+  const defaultTitle = ''
+  const defaultDescription = '村上奈緒美のポートフォリオサイトです。'
 
   const title = pageTitle ? `${pageTitle} | ${defaultTitle}` : defaultTitle
   const description = pageDescription ? pageDescription : defaultDescription
   const url = pagePath
   const imgUrl = pageImg
-  const imgWidth = pageImgWidth ? pageImgWidth : 1280
-  const imgHeight = pageImgHeight ? pageImgHeight : 640
+  const imgWidth = pageImgWidth ? pageImgWidth : 1200
+  const imgHeight = pageImgHeight ? pageImgHeight : 675
 
   return (
     <Head>

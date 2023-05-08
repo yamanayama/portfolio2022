@@ -17,7 +17,7 @@ const Home = () => {
       <Seo
         pageTitle={'Naomi Murakami portfolio'}
         pageDescription={'村上奈緒美のポートフォリオサイトです。'}
-        pageImg={'https://portfolio2022-pi-ten.vercel.app/ogp.jpg'}
+        pageImg={'https://portfolio2022-pi-ten.vercel.app/images/ogp.jpg'}
         pageImgWidth={1200}
         pageImgHeight={675}
       />
