@@ -18,10 +18,10 @@ const Gohan = ({ data, tag }) => {
       <Breadcrumbs current="works" />
       <main>
         <div css={wrapper}>
-          <Side tag={tag} />
           <div css={rowContainer}>
             <Card data={data} />
           </div>
+          <Side tag={tag} />
         </div>
       </main>
       <Footer />
@@ -60,7 +60,7 @@ const wrapper = css`
       @media (min-width: ${breakPoint}) {
         width: min(100%, ${contentWidth});
         display: grid;
-        grid-template-columns: 240px 1fr;
+        grid-template-columns: 1fr 240px;
         gap: 32px;
         padding: 40px 0 96px;
         }

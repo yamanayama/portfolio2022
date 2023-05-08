@@ -90,6 +90,7 @@ const card = css`
 
         &:hover{
           color: ${color.blown};
+          cursor: pointer;
 
           img{
             transform: scale(1.1);

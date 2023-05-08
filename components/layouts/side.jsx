@@ -24,10 +24,18 @@ const Side = ({ tag }) => {
 
 export default Side
 
+
+const aside = css`
+    margin-top: 48px;
+
+  @media (min-width: ${breakPoint}) {
+      position: sticky;
+      top: 80px;
+    }
+`
+
 const menu = css`
-    padding-top: 40px;
-    margin-top: 40px;
-    border-top: 1px solid ${color.salmon};
+    margin-top: 16px;
 
     @media (min-width: ${breakPoint}) {
       padding-top: 0;
@@ -35,14 +43,6 @@ const menu = css`
       border: none;
     }
   `
-
-const aside = css`
-
-@media (min-width: ${breakPoint}) {
-    position: sticky;
-    top: 80px;
-  }
-`
 
 const title = css`
       font-size: ${typography.text.headline6}px;

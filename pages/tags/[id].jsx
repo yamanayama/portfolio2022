@@ -21,10 +21,10 @@ const TagsId = ({ data, tagName, tagNameList }) => {
 
       <main>
         <div css={wrapper}>
-          <Side tag={tagNameList} />
           <div css={rowContainer}>
             {data.length === 0 ? ("このタグの実績はまだありません。他のタグをご覧ください！") : (<Card data={data} />)}
           </div>
+          <Side tag={tagNameList} />
         </div>
       </main>
       <Footer />
@@ -62,12 +62,12 @@ export const getStaticProps = async (context) => {
 
 const wrapper = css`
       margin: auto;
-      padding: 32px 16px;
+      padding: 60px 16px;
 
       @media (min-width: ${breakPoint}) {
         width: min(100%, ${contentWidth});
         display: grid;
-        grid-template-columns: 240px 1fr;
+        grid-template-columns: 1fr 240px;
         gap: 32px;
         padding: 40px 0 96px;
       }
