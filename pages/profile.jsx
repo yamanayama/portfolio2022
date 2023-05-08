@@ -46,6 +46,13 @@ const Profile = () => {
           </div>
 
           <div css={profileBlock}>
+            <Image
+              css={profileImage}
+              src="/images/profile2.jpg"
+              alt="profile"
+              width={542}
+              height={400}
+            />
             <div css={profileText}>
               <h3 css={profileTitle}>モットーは、<br />明るく、楽しく、元気よく</h3>
               <div css={textBox}>
@@ -55,13 +62,6 @@ const Profile = () => {
                 <p>逆に言えば、トップダウン的な強いリーダーシップの発揮は苦手です。</p>
               </div>
             </div>
-            <Image
-              css={profileImage}
-              src="/images/profile2.jpg"
-              alt="profile"
-              width={542}
-              height={400}
-            />
           </div>
 
           <div css={profileBlock}>
@@ -198,6 +198,10 @@ const profileBlock = css`
 
           &:not(:first-of-type){
             margin-top: 120px;
+          }
+
+          &:nth-of-type(2){
+            flex-direction: row-reverse;
           }
   
         }

@@ -165,8 +165,12 @@ const catchCopySubTitle = css`
       `
 
 const catchCopyTitle = css`
-      font-size: ${typography.text.headline2}px;
+      font-size: ${typography.text.headline5}px;
       font-weight: bold;
+
+      @media (min-width: ${breakPoint}) {
+        font-size: ${typography.text.headline3}px;
+      }
       `
 
 const catchCopyText = css`
