@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 
+import Image from "next/image";
 
 import { css } from "@emotion/react"
 
@@ -27,19 +28,31 @@ const Skill = () => {
 
       <main>
         <div css={container}>
-          <h2 css={title}>ユーザーとビジネスを繋ぐ</h2>
-          <p css={titleOption}>Mission</p>
+          <div css={rowContainer}>
+            <div css={rowBlock}>
+              <h2 css={title}>ユーザーとビジネスを繋ぐ</h2>
+              <p css={titleOption}>Mission</p>
 
-          <div css={textBox}>
-            <p>私たちデザイナーが「デザインは課題解決だ」と考えていても、<br />「ユーザーが必要としているもの」と「ビジネスとして提供したいもの」が、イコールになるとは限りません。</p>
-            <p style={{ marginTop: 16 }}>それは提供側がユーザーのペインを理解していなかったり、<br />
-              目の前の利益や数字を追いかけ過ぎていたり…。</p>
-            <p style={{ marginTop: 16 }}>私たちデザイナーは、ユーザーのためのプロダクト作りを最優先にし、<br />同時にビジネスとして利益を得るバランスを考え続けるべきだと考えています。</p>
-            <p style={{ marginTop: 16 }}>デザインがプロダクトを前進させ、利益を産むと証明できれば、<br />デザイナーの給与が上がることに繋がるはず。</p>
-            <p style={{ marginTop: 16 }}>ビジネス、エンジニアリングと並び、デザインの視点でプロダクトを前進させていくことが、私のミッションです。</p>
+              <div css={textBox}>
+                <p>私たちデザイナーが「デザインは課題解決だ」と考えていても、<br />「ユーザーが必要としているもの」と「ビジネスとして提供したいもの」が、イコールになるとは限りません。</p>
+                <p style={{ marginTop: 16 }}>それは提供側がユーザーのペインを理解していなかったり、<br />
+                  目の前の利益や数字を追いかけ過ぎていたり…。</p>
+                <p style={{ marginTop: 16 }}>私たちデザイナーは、ユーザーのためのプロダクト作りを最優先にし、<br />同時にビジネスとして利益を得るバランスを考え続けるべきだと考えています。</p>
+                <p style={{ marginTop: 16 }}>デザインがプロダクトを前進させ、利益を産むと証明できれば、<br />デザイナーの給与が上がることに繋がるはず。</p>
+                <p style={{ marginTop: 16 }}>ビジネス、エンジニアリングと並び、デザインの視点でプロダクトを前進させていくことが、私のミッションです。</p>
+              </div>
+            </div>
+            <div css={rowImageWrap}>
+              <Image
+                css={rowImage}
+                src="/images/business.jpg"
+                alt="business"
+                width={542}
+                height={400}
+              />
+            </div>
           </div>
         </div>
-
         <div css={containerInBox}>
           <div css={inner}>
             <h2 css={title}>Value</h2>
@@ -205,6 +218,7 @@ const textBox = css`
 const rowContainer = css`
 
     @media (min-width: ${breakPoint}) {
+      align-items: flex-start;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
@@ -223,6 +237,18 @@ const rowBlock = css`
       }
 `
 
-const iconStyle = css`
-    stroke: ${color.text.high};
-`;
+const rowImageWrap = css`
+    margin-top: 40px;
+    text-align: center;
+
+    @media (min-width: ${breakPoint}) {
+        margin-top: 0;
+        text-align: left;
+      }
+        `
+
+const rowImage = css`
+        width: max(100%,474px);
+        height: 400px;
+        border-radius: 24px;
+        `

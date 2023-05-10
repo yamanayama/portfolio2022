@@ -28,13 +28,15 @@ const Profile = () => {
       <main>
         <div css={container}>
           <div css={profileBlock}>
-            <Image
-              css={profileImage}
-              src="/images/profile1.jpg"
-              alt="profile"
-              width={542}
-              height={400}
-            />
+            <div css={profileImageWrap}>
+              <Image
+                css={profileImage}
+                src="/images/profile1.jpg"
+                alt="profile"
+                width={542}
+                height={400}
+              />
+            </div>
 
             <div css={profileText}>
               <h3 css={nameTitle}>Naomi Murakami<br />
@@ -54,13 +56,15 @@ const Profile = () => {
           </div>
 
           <div css={profileBlock}>
-            <Image
-              css={profileImage}
-              src="/images/profile2.jpg"
-              alt="profile"
-              width={542}
-              height={400}
-            />
+            <div css={profileImageWrap}>
+              <Image
+                css={profileImage}
+                src="/images/profile2.jpg"
+                alt="profile"
+                width={542}
+                height={400}
+              />
+            </div>
             <div css={profileText}>
               <h3 css={profileTitle}>モットーは、<br />明るく、楽しく、元気よく</h3>
               <div css={textBox}>
@@ -73,14 +77,15 @@ const Profile = () => {
           </div>
 
           <div css={profileBlock}>
-            <Image
-              css={profileImage}
-              src="/images/profile3.jpg"
-              alt="profile"
-              width={542}
-              height={400}
-            />
-
+            <div css={profileImageWrap}>
+              <Image
+                css={profileImage}
+                src="/images/profile3.jpg"
+                alt="profile"
+                width={542}
+                height={400}
+              />
+            </div>
             <div css={profileText}>
               <h3 css={profileTitle}>ステージが変わっても<br />走り続ける</h3>
               <div css={textBox}>
@@ -216,14 +221,23 @@ const profileBlock = css`
         `
 
 const profileText = css`
-        margin-top: 24px;
-  
+      margin-top: 24px;
+
         @media (min-width: ${breakPoint}) {
           margin-top: 0;
           padding-top: 24px;
           width: calc(100% - 542px - 32px);
       }
         `
+
+const profileImageWrap = css`
+    text-align: center;
+
+    @media (min-width: ${breakPoint}) {
+        text-align: left;
+      }
+        `
+
 
 const profileImage = css`
         width: max(100%,474px);
