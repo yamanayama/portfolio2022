@@ -123,7 +123,7 @@ const Profile = () => {
             </div>
           </div>
         </div>
-      </main >
+      </main>
       <Footer />
     </>
   );
