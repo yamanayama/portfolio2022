@@ -56,7 +56,7 @@ const BlogId = ({ blog }) => {
                 <picture css={imageBox}>
                   <Image
                     src={blog?.processImage?.url}
-                    css={eyecatchImage}
+                    css={articleImage}
                     alt="画像1"
                     width={800}
                     height={480}
@@ -77,7 +77,7 @@ const BlogId = ({ blog }) => {
                 <picture css={imageBox}>
                   <Image
                     src={blog?.messageImage?.url}
-                    css={eyecatchImage}
+                    css={articleImage}
                     alt="画像2"
                     width={800}
                     height={480}
@@ -196,6 +196,29 @@ const articleContainer = css`
 
 const articleBox = css`
       margin-top:32px;
+      a{
+        text-decoration: underline;
+
+        &:hover{
+          color: ${color.blown};
+        }
+      }
+
+      ol{
+        margin-left: 2rem;
+
+        li{
+          list-style-type: number;
+        }
+      }
+
+      ul{
+        margin-left: 1rem;
+
+        li{
+          list-style-type: disc;
+        }
+      }
 
       @media (min-width: ${breakPoint}) {
         margin-top: 48px;
@@ -204,6 +227,10 @@ const articleBox = css`
 
 const eyecatchImage = css`
       object-fit: cover;
+      `
+
+const articleImage = css`
+      object-fit: contain;
       `
 
 const buttonArea = css`
