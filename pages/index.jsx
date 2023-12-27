@@ -54,10 +54,10 @@ const Home = () => {
               <p style={{ marginTop: 40 }}>
                 広告系の専門学校を卒業後、絵の具の販売員やゲームイラストレーターを経て、WEB業界へ。<br />
                 現在は事業会社のUIUXデザイナーです。<br />
-                UXリサーチからUI制作、フロントエンド実装まで幅広く担当します。</p>
+                UXリサーチからUI制作、コーディングまで幅広く担当します。</p>
 
               <p style={{ marginTop: 16 }}>好きなものは猫、マインクラフト、コーヒー、激辛料理。<br />
-                最近は3Dと東海オンエアにはまっています。<br />
+                最近は3Dにはまっています。<br />
                 現在は子育てに奮闘中🔥</p>
               <div css={profileButtonArea}>
                 <Button type="button" onClick={() => Router.push('/profile')}>more</Button>
@@ -100,7 +100,7 @@ const Home = () => {
           <div css={rowContainer}>
             <div css={rowBlock}>
               <h3 css={subTitle}>リサーチから画面設計、実装まで</h3>
-              <p style={{ marginTop: 16 }}>課題に対する問いの立案から始め、調査設計書の作成とリサーチ、UI作成、Reactなどの実装までワンストップで行います。<br />
+              <p style={{ marginTop: 16 }}>課題に対する問いの立案から始め、調査設計書の作成とリサーチ、UI作成、Reactなどの実装（主にマークアップ、CSS、簡単な状態管理周り）までワンストップで行います。<br />
                 リサーチからUIまでを一人で行うことで、プロトタイプの仮説検証サイクルを高速で回すことが可能です。</p>
             </div>
             <div css={rowBlock}>
